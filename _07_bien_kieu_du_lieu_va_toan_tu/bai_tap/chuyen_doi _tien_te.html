@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 800px;
+
+        }
+    </style>
+</head>
+<body>
+<table border="0" align="center" >
+    <tr>
+        <th>Amount</th>
+        <th></th>
+        <th>From Currency</th>
+        <th></th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <th><input type="text" id="amount"></th>
+        <th></th>
+        <th>
+            <select id="fromCurrency">
+                <option value="vn">VietNam</option>
+                <option value="usa">America</option>
+            </select>
+        </th>
+        <th></th>
+        <th>
+            <select id="toCurrency">
+                <option value="USD">USD</option>
+                <option value="VND">VND</option>
+            </select>
+        </th>
+    </tr>
+</table>
+<br><br>
+<input type="button" value="convert" onclick="Click()">
+<h5 id="result">result</h5>
+<script>
+    function Click() {
+        let a = parseInt(document.getElementById("amount").value)
+        let b = document.getElementById("fromCurrency").value
+        let c = document.getElementById("toCurrency").value
+        if (b == "VietNam" && c == "USD") {
+            let total = a * 23000;
+            document.getElementById("result").innerHTML = total;
+        } else {
+            let total = a / 23000;
+            document.getElementById("result").innerHTML = total;
+        }
+    }
+</script>
+</body>
+</html>

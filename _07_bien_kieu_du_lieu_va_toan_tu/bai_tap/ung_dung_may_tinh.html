@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Caculator</h1>
+<form>
+    <input type="number" id="so1" placeholder="Hãy nhập số">
+    <input type="number" id="so2" placeholder="Hãy nhập số"><br><br>
+    <input type="button" value="Addition(+)" id="Addition" onclick="cong()">
+    <input type="button" value="Subtration(-)" id="Subtration" onclick="tru()">
+    <input type="button" value="multipliction(x)" id="multipliction" onclick="nhan()">
+    <input type="button" value="Division(/)" id="Division" onclick="chia()">
+    <h4 id="result">result Division :</h4>
+</form>
+<script>
+    function cong() {
+        let a = document.getElementById("so1").value;
+        let b = document.getElementById("so2").value;
+        let total
+        total = a + b;
+        document.getElementById("result").innerHTML = total
+    }
+
+    function tru() {
+        let a = document.getElementById("so1").value;
+        let b = document.getElementById("so2").value;
+        let total
+        total = a - b;
+        document.getElementById("result").innerHTML = total
+    }
+
+    function nhan() {
+        let a = document.getElementById("so1").value;
+        let b = document.getElementById("so2").value;
+        let total
+        total = a * b;
+        document.getElementById("result").innerHTML = total
+    }
+
+    function chia() {
+        let a = document.getElementById("so1").value;
+        let b = document.getElementById("so2").value;
+        let total
+        total = a / b;
+        document.getElementById("result").innerHTML = total
+    }
+    // dfadf
+</script>
+</body>
+</html>
