@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Bạn là thành viên của lớp C0421G1 </h4>
+<form>
+    <input type="checkbox" value="" id="chkbx">Vâng,đúng vậy<br><br>
+    <input type="button" value="Chọn" onclick="btn1()">
+    <input type="button" value=" Bỏ chọn" onclick="btn2()">
+</form>
+<script>
+    function btn1() {
+        document.getElementById("chkbx").checked = true;
+    }
+
+    function btn2() {
+        document.getElementById("chkbx").checked = false;
+    }
+</script>
+</body>
+</html>

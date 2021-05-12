@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Thêm thẻ HTML</h1>
+<form>
+    <input type="text" id="them">
+    <input type="button" value="Add" onclick="ad()">
+    <div id="result"></div>
+</form>
+<script>
+    function ad() {
+        let a = document.getElementById("them").value;
+        console.log(a);
+        let  html = '<button>' + a + '</button>';
+        document.getElementById("result").innerHTML = html;
+        // document.getElementById('result').insertAdjacentHTML('afterend', html);
+        if(a==0){
+            alert("bạn chưa nhập nội dung")
+        }
+    }
+</script>
+</body>
+</html>

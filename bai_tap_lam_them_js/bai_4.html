@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="removeButton()">
+<h1>Xóa thẻ HTML</h1>
+<table border="1">
+    <tr>
+        <th>1</th>
+        <td>Tiêu đề thứ nhất</td>
+        <th><input type="button" value="Delete"></th>
+    </tr>
+    <tr>
+        <th>2</th>
+        <td>Tiêu đề thứ hai</td>
+        <th><input type="button" value="Delete"></th>
+    </tr>
+    <tr>
+        <th>3</th>
+        <td>Tiêu đề thứ ba</td>
+        <th><input type="button" value="Delete"></th>
+    </tr>
+    <tr>
+        <th>4</th>
+        <td>Tiêu đề thứ tư</td>
+        <th><input type="button" value="Delete"></th>
+    </tr>
+</table>
+<script>
+    // window.onload = function(){
+    //   let button = document.getElementsByTagName('input');
+    //   for (let i = 0; i < button.length; i++){
+    //     button[i].addEventListener("click", function(){
+    //        let parent = this.parentElement.parentElement;
+    //       parent.remove();
+    //     });
+    //   }
+    // };
+    function removeButton() {
+        let button = document.getElementsByTagName('input');
+        for (let i = 0; i < button.length; i++) {
+            button[i].addEventListener("click", function () {
+                let parent = this.parentElement.parentElement;
+                parent.remove();
+            });
+        }
+    }
+</script>
+</body>
+</html>

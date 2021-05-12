@@ -9,10 +9,10 @@
 <form>
     <input type="number" id="so1" placeholder="Hãy nhập số">
     <input type="number" id="so2" placeholder="Hãy nhập số"><br><br>
-    <input type="button" value="Addition(+)" id="Addition" onclick="cong()">
-    <input type="button" value="Subtration(-)" id="Subtration" onclick="tru()">
-    <input type="button" value="multipliction(x)" id="multipliction" onclick="nhan()">
-    <input type="button" value="Division(/)" id="Division" onclick="chia()">
+    <input type="button" value="Addition(+)" onclick="cong()">
+    <input type="button" value="Subtration(-)" onclick="tru()">
+    <input type="button" value="multipliction(x)" onclick="nhan()">
+    <input type="button" value="Division(/)" onclick="chia()">
     <h4 id="result">result Division :</h4>
 </form>
 <script>
@@ -47,7 +47,6 @@
         total = a / b;
         document.getElementById("result").innerHTML = total
     }
-    // dfadf
 </script>
 </body>
 </html>

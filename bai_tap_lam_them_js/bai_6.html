@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Lấy giá trị của thẻ HTML</h1>
+<from>
+    <label>bạn tên là gì ?</label>
+    <input type="text" id="name"><br><br>
+    <label>Chọn sở thích của bạn.</label><br>
+    <input type="checkbox" name="hobby" value="Đi chơi">Đi chơi <br>
+    <input type="checkbox" name="hobby" value="Đi du lịch">Đi du lịch <br>
+    <input type="checkbox" name="hobby" value="Đi ăn">Đi ăn <br>
+    <input type="checkbox" name="hobby" value="Đi siêu thị">Đi siêu thị <br>
+    <input type="checkbox" name="hobby" value="Học lập trình">Học lập trình <br><br>
+    <input type="button" value="Xem kết quả" id="result" onclick="Click()">
+</from>
+<script>
+    function Click() {
+        let name = document.getElementById('name').value
+        let checkbox = document.getElementsByName('hobby')
+        let total = ''
+        for (let i = 0; i < checkbox.length; i++) {
+            if (checkbox[i].checked === true) {
+                total += ' [' + checkbox[i].value + ']';
+            }
+        }
+        alert("Sở thích của " + name + " là :" + total)
+    }
+</script>
+</body>
+</html>

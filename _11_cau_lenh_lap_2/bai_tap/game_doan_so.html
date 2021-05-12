@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="play" onclick="play()">
+<input type="button" value="play again" onclick="play()">
+<script>
+    let computer = Math.floor(Math.random() * 10)
+    let count = 3
+
+    function play() {
+        let player = 0
+        do {
+            player = parseInt(prompt("input here"));
+            if (computer === player) {
+                alert("congratulations")
+            } else {
+                alert("try again")
+            }
+        } while (player <= count)
+    }
+</script>
+</body>
+</html>
