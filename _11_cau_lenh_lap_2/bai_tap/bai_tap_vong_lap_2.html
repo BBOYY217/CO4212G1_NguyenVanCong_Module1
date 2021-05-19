@@ -17,6 +17,7 @@
     //     b = c;
     //     document.write(c +" ")
     // }
+
     // bài 2 Tính giai thừa của một số nguyên dương
     // let n = parseInt(prompt("input here"));
     // let inherit = 1;
@@ -24,6 +25,7 @@
     //     inherit = inherit * i;
     // }
     // document.write(inherit)
+
     // bài 3 In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau
     // let h = parseInt(prompt("inpput here"))
     // for (i = 0; i < h; i++) {
@@ -39,27 +41,28 @@
     //     }
     //     document.writeln("<br/>")
     // }
+
     // bài 4 Hình chữ nhật
-    // let a = 7;
-    // let b = 20;
-    // let c = "";
-    // for (let i = 0; i < a; i++) {
-    //     if (i == 0 || i == a - 1) {
-    //         for (let j = 0; j < b; j++) {
-    //             c += "*";
-    //         }
-    //     } else {
-    //         for (let k = 0; k < b; k++) {
-    //             if (k == 0 || k == b - 1) {
-    //                 c += "*";
-    //             } else {
-    //                 c += " ";
-    //             }
-    //         }
-    //     }
-    //     c += '<br>';
-    // }
-    // document.write('<pre>' + c + '</pre>')
+    let a = 7;
+    let b = 20;
+    let c = "";
+    for (let i = 0; i < a; i++) {
+        if (i == 0 || i == a - 1) {
+            for (let j = 0; j < b; j++) {
+                c += "*";
+            }
+        } else {
+            for (let k = 0; k < b; k++) {
+                if (k == 0 || k == b - 1) {
+                    c += "*";
+                } else {
+                    c += " ";
+                }
+            }
+        }
+        c += '<br>';
+    }
+    document.write('<pre>' + c + '</pre>')
 </script>
 </body>
 </html>

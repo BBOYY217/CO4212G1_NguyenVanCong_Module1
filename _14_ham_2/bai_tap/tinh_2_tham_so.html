@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tinh(a, b) {
+        let total = a + b;
+        if (a > b) {
+            alert("tham số thứ nhất lớn hơn tham số thứ hai")
+        } else if (a < b) {
+            alert("tham số thứ hai lớn hơn tham số thứ nhất " +"\n"
+                + "tổng 2 tham số cộng lại là: "+ total)
+        }
+    }
+    let x = parseInt(prompt("nhập tham số thứ nhất "))
+    let y = parseInt(prompt("nhập tham số thứ hai "))
+    tinh(x,y)
+</script>
+</body>
+</html>

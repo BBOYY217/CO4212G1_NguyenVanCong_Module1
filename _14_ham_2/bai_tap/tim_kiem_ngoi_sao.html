@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function ngoiSao(a, b, c) {
+        let check = false;
+        for (let i = 0; i < a.length; i++) {
+            if (c == a[i]) {
+                alert(b[i]);
+                check = true;
+                break
+            }
+        }
+        if (check == false) {
+            alert("loi");
+        }
+    }
+
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let arr2 = ["UrsaMinor", "Tarurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor", "Leo"]
+    let name = prompt("nhap du lieu");
+
+    ngoiSao(arr1, arr2, name)
+</script>
+</body>
+</html>
