@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Add new Product</h1>
+<input type="text" id="newProduct">
+<button onclick="addNew()">Add</button>
+<br><br>
+
+<div id="displayTable"></div>
+
+<script>
+    let listProduct = ["Sony Xperia", "Samsung galaxy", "Xiaomi"];
+
+    function display() {
+        let html =
+            "<table border=\"1\">\n" +
+            "  <tr>\n" +
+            "    <th>product name</th>\n" +
+            "    <td> Edit </td>\n" +
+            "    <td> Delete</td>\n" +
+            "  </tr>\n"
+        for (let i = 0; i < listProduct.length; i++) {
+            html = html + " <tr>\n" +
+                "    <th>" + listProduct[i] + "</th>\n" +
+                "    <td><button onclick='repair(" + i + ")'>edit</button></td>\n" +
+                "    <td><button onclick='deleteProduct(" + i + ")'>Delete</button></td>\n" +
+                "  </tr>\n";
+        }
+        html = html + "</table>";
+        document.getElementById("displayTable").innerHTML = html;
+    }
+
+    display();
+
+    function addNew() {
+        let newProduct = document.getElementById("newProduct").value;
+        if (newProduct == "") {
+            alert("Please input product name");
+        } else {
+            listProduct.push(newProduct);
+            display();
+            alert("Add new product " + newProduct + " OK!");
+            document.getElementById("newProduct").value = "";
+        }
+    }
+
+    function repair(index) {
+        listProduct[index] = prompt("sửa lại sản phẩm ")
+        display()
+    }
+
+    function deleteProduct(index) {
+        if (confirm("Are you want delete product " + listProduct[index] + " ?")) {
+            listProduct.splice(index, 1);
+            display();
+        }
+    }
+</script>
+</body>
+</html>

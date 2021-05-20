@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTraMang(arr, b) {
+        let count = 0;
+        let check = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == b) {
+                check = true;
+                count++;
+            }
+        }
+        if (check == true) {
+            return count;
+        } else {
+            return -1;
+        }
+    }
+
+    let arr = [1, 2, 3, 1, 2, 3];
+    let a = 2;
+    alert(kiemTraMang(arr, a))
+</script>
+</body>
+</html>
