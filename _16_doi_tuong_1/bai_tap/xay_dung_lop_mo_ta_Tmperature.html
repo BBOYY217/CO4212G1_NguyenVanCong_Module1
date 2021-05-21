@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temparature {
+        constructor(C) {
+            this.C = C;
+        }
+
+        getC() {
+            return this.C;
+        }
+
+        setC(Cmoi) {
+            this.C = Cmoi;
+        }
+
+        chuyenDoiCSangF() {
+            return 1.8 * this.C + 32;
+        }
+
+        chuyenDoiCsangKenvin() {
+            return this.C - 273.15;
+        }
+    }
+
+    let tem = new Temparature();
+    tem.setC(120)
+    alert(tem.chuyenDoiCSangF());
+    alert(tem.chuyenDoiCsangKenvin());
+</script>
+</body>
+</html>
