@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="game"></div>
+<script>
+    class Hero {
+        constructor(image, top, left, size) {
+            this.image = image;
+            this.top = top;
+            this.left= left;
+            this.size = size;
+        }
+
+        getimage() {
+            return this.image;
+        }
+
+        gettop() {
+            return this.top;
+        }
+
+        getleft() {
+            return this.left;
+        }
+
+        getsize() {
+            return this.size;
+        }
+
+        setimage(imageNew) {
+            this.image = imageNew;
+        }
+
+        settop(topNew) {
+            this.top = topNew;
+        }
+
+        setleft(leftNew) {
+            this.left = leftNew;
+        }
+
+        setsize(sizeNew) {
+            this.size = sizeNew;
+        }
+
+        heroElement() {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        }
+        moveRight(){
+            this.left += 20;
+            console.log('ok: ' + this.left);
+        }
+        speedBoost(){
+            // return this.left*=2;
+            this.left *= 2;
+            console.log('ok: ' + this.left);
+        }
+    }
+    let  hero = new Hero('pikachu.png', 20, 30, 300)
+
+    function start(){
+        if(hero.left < window.innerWidth - hero.size){
+            hero.moveRight();
+            hero.speedBoost();
+        }
+        document.getElementById('game').innerHTML = hero.heroElement();
+        setTimeout(start, 500)
+    }
+
+    start();
+</script>
+</body>
+</html>

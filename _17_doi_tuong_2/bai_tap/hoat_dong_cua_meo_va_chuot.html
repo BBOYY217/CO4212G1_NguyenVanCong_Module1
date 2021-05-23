@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mouse {
+        constructor(name, weight, speed, status) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.status = status;
+        }
+
+        getname() {
+            return this.name;
+        }
+
+        getweight() {
+            return this.weight;
+        }
+
+        getspeed() {
+            return this.speed;
+        }
+
+        getstatus() {
+            return this.status;
+        }
+
+        setname(newName) {
+            this.name = newName;
+        }
+
+        setweight(newweight) {
+            this.weight = newWeight;
+        }
+
+        setspeed(newSpeed) {
+            this.speed = Speed;
+        }
+
+        setstatus(newStatus) {
+            this.status = newStatus;
+        }
+
+        noise() {
+            alert("chit chit")
+        }
+    }
+
+    class Cat {
+        constructor(name, weight, speed, status) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.status = status;
+        }
+
+        getname() {
+            return this.name;
+        }
+
+        getweight() {
+            return this.weight;
+        }
+
+        getspeed() {
+            return this.speed;
+        }
+
+        getstatus() {
+            return this.status;
+        }
+
+        setname(newName) {
+            this.name = newName;
+        }
+
+        setweight(newweight) {
+            this.weight = newWeight;
+        }
+
+        setspeed(newSpeed) {
+            this.speed = Speed;
+        }
+
+        setstatus(newStatus) {
+            this.status = newStatus;
+        }
+
+        noise() {
+            alert("meow meow")
+        }
+
+        catch(mouseObj) {
+            if (this.speed > mouseObj.speed) {
+                alert(this.name + " catch " + mouseObj.name)
+            } else {
+                alert(this.name + " can't catch " + mouseObj.name)
+            }
+        }
+
+        eat(mouseObj) {
+            if (mouseObj.status === "song") {
+                this.weight = this.weight + mouseObj.weight;
+                alert("eat done,my weight is " + this.weight)
+            } else {
+                alert("I can't eat this disgusting ")
+            }
+        }
+    }
+
+    let mouseTest = new Mouse("Jerry", 3, 4, "song");
+    let catTest = new Cat("Tom", 10, 6);
+
+    mouseTest.noise()
+    catTest.noise()
+    catTest.catch(mouseTest)
+    catTest.eat(mouseTest)
+
+</script>
+</body>
+</html>
