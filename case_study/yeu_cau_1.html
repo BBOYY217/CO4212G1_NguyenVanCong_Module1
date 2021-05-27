@@ -46,6 +46,19 @@
   //   document.write("</br>")
   // }
 
+  // bài 3
+  let c ="";
+  let chieucao = parseInt(prompt("nhập chiều cao hình tam giác"))
+  for (let i =1;i<=chieucao;i++){
+      for (let a =1;a<chieucao-i+1;a++){
+          c+=" ";
+      }
+      for (let b =1;b<=i*2-1;b++){
+          c+="*"
+      }
+      c+="</br>";
+  }
+  document.writeln("<pre>"+c+"</pre>");
 
 </script>
 </body>

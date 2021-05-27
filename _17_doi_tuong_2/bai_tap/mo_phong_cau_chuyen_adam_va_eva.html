@@ -11,7 +11,7 @@
             this.weight = weight;
         }
 
-        getWeight() {
+        getweight() {
             return this.weight;
         }
 
@@ -37,24 +37,16 @@
             this.weight = weight;
         }
 
-        getName() {
+        getname() {
             return this.name;
         }
 
-        getWeight() {
+        getweight() {
             return this.weight;
         }
 
-        getGender() {
+        getgender() {
             return this.gender;
-        }
-
-        setName(newName) {
-            this.name = newName;
-        }
-
-        setWeight(newWeight) {
-            this.weight = newWeight;
         }
 
         isMale() {
@@ -66,7 +58,7 @@
         }
 
         checkApple(apple) {
-            if (apple.getWeight() > 0) {
+            if (apple.getweight() > 0) {
                 return true;
             } else {
                 return false;
@@ -74,7 +66,7 @@
         }
 
         eat(apple) {
-            if (apple.getWeight() > 0) {
+            if (apple.getweight() > 0) {
                 this.weight++;
                 apple.decrease();
             }
@@ -92,21 +84,21 @@
     adam.say("hello");
     eva.say("hello");
 
-    adam.eat(appleRed);
-    alert("Apple weight: " + appleGod.getWeight());
-    alert("Adam weight: " + adam.getWeight());
+    adam.eat(appleGod);
+    alert("Apple weight: " + appleGod.getweight());
+    alert("Adam weight: " + adam.getweight());
 
-    eva.eat(appleRed);
-    alert("Apple weight: " + appleGod.getWeight());
-    alert("Eva weight: " + eva.getWeight());
+    eva.eat(appleGod);
+    alert("Apple weight: " + appleGod.getweight());
+    alert("Eva weight: " + eva.getweight());
 
-    while (appleRed.isEmpty() == false) {
+    while (appleGod.isEmpty() == false) {
         adam.eat(appleGod);
         eva.eat(appleGod);
     }
-    alert("Apple weight: " + appleGod.getWeight());
-    alert("Adam weight: " + adam.getWeight());
-    alert("Eva weight: " + eva.getWeight());
+    alert("Apple weight: " + appleGod.getweight());
+    alert("Adam weight: " + adam.getweight());
+    alert("Eva weight: " + eva.getweight());
 </script>
 </body>
 </html>

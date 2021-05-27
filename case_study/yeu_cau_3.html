@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // bài 1
+    //  let b = [];
+    // let total = 0;
+    // let n = parseInt(prompt("nhập chiều dài của mảng"));
+    // let a = new Array(n);
+    // for (let i = 0; i < a.length; i++) {
+    //     a[i] = parseInt(prompt("nhập phần tử của mảng a"));
+    // }
+    // for (let i = 0; i < a.length; i++) {
+    //     total += a[i];
+    //     b.push(total);
+    // }
+    // alert("mảng a được khởi tạo là: " + a + "\n" +
+    //     "mảng b được khởi tạo là: " + b);
+
+    // bài 2
+    // let A=[7,2,5,3,5,3]
+    // let B=[7,2,5,4,6,3,5,3];
+    // let C=[];
+    // for (let i = 0; i < B.length; i++) {
+    //     if(A.indexOf(B[i])==-1){
+    //         C.push(B[i]);
+    //     }
+    // }
+    // alert("phần tử khác nhau giữa A và B là: " + C)
+
+    // bài 3
+    // let a = new Array(5);
+    //
+    // for (let i = 0; i < 5; i++) {
+    //     a[i]=parseInt(prompt("phần tử của a"))
+    // }
+    // let b = new Array(5);
+    // for (let i = 0; i < 5; i++) {
+    //     b[i]=parseInt(prompt("phần tử của b"))
+    // }
+    // let max = a[0]/b[0];
+    // let index=0;
+    // for (let i = 0; i < a.length; i++) {
+    //     if (  a[i]/b[i]>max){
+    //         max=  a[i]/b[i];
+    //         index=i;
+    //     }
+    // }
+    // alert(index)
+
+    // bài 4
+    // let string=["không","một","hai","ba","bốn","năm","sáu","bảy","tám","chín"];
+    // let number=prompt("nhập số vào đây");
+    // let c=[];
+    // for (let i = 0; i < number.length; i++) {
+    //     let index = parseInt(number[i]);
+    //     c.push(string[index]);
+    // }
+    // alert(c)
+
+    // bài 5
+    let choose;
+    do {
+        alert("Menu\n" +
+            "1.cafe\n" +
+            "2.cam vắt\n" +
+            "3.nước ép cà rốt\n" +
+            "4.nước ép cà chua\n" +
+            "5.nước lọc\m" +
+            "6.nước dừa\n" +
+            "7.tính tiền\n" +
+            "8.thoát")
+        choose = parseInt(prompt("moi ban chon cac muc trong menu"));
+        let price = [7000, 15000, 25000, 20000, 10000, 18000];
+        let bill = 0
+        switch (choose) {
+            case 1:
+                alert("cafe");
+                price[0];
+                break;
+            case 2:
+                alert("cam vắt");
+                break;
+            case 3:
+                alert("nước ép cà rốt");
+                break;
+            case 4:
+                alert("nước ép cà chua");
+                break;
+            case 5:
+                alert("nước lọc");
+                break;
+            case 6:
+                alert("nước dừa");
+                break;
+            default:
+                break
+        }
+    } while (choose !== 7)
+</script>
+</body>
+</html>
